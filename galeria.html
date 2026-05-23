@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Galeria | Barraca Bar</title>
+  <meta name="description" content="Galeria de fotos do Barraca Bar — o nosso espaço, pratos e ambiente na Praia da Areia Branca."/>
+  <!-- Open Graph -->
+  <meta property="og:type"
+      content="website">
+  <meta property="og:site_name"
+      content="Barraca Bar">
+  <meta property="og:title"
+      content="Barraca Bar | Praia da Areia Branca">
+  <meta property="og:description"
+      content="Pizzas napolitanas, Smash Burgers e cocktails
+               junto à praia. Qua–Dom, 10h–23h.">
+  <meta property="og:image"
+      content="https://barracabar.pt/imagens/pallinni.jpg">
+  <meta property="og:url"
+      content="https://barracabar.pt">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="css/estilos.css" rel="stylesheet"/>
+  <style>
+    /* ── Lightbox only — gallery CSS lives in estilos.css ── */
+    #lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(10,25,55,.96); z-index: 2000;
+      align-items: center; justify-content: center;
+      flex-direction: column; gap: 1.25rem;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox-img {
+      max-width: 90vw; max-height: 78vh;
+      border-radius: 12px; object-fit: contain;
+      box-shadow: 0 24px 60px rgba(0,0,0,.6);
+    }
+    #lightbox-caption {
+      color: rgba(255,255,255,.82); font-size: .95rem;
+      font-family: 'Inter', sans-serif; text-align: center;
+    }
+    #lightbox-close {
+      color: #fff; background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.3); border-radius: 6px;
+      padding: .45rem 1.4rem; cursor: pointer;
+      font-family: 'Inter', sans-serif; font-weight: 700;
+      font-size: .85rem; letter-spacing: .5px; text-transform: uppercase;
+      transition: all .2s;
+    }
+    #lightbox-close:hover { background: #fff; color: #1a4b8c; }
+    .lb-nav {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      color: #fff; border-radius: 6px; padding: .6rem 1rem;
+      font-size: 1.2rem; cursor: pointer; transition: all .2s; z-index: 2001;
+    }
+    .lb-nav:hover { background: #fff; color: #1a4b8c; }
+    #lb-prev { left: 1.5rem; }
+    #lb-next { right: 1.5rem; }
+    #lb-counter {
+      position: fixed; top: 1rem; right: 1.5rem;
+      color: rgba(255,255,255,.5); font-size: .78rem;
+      font-family: 'Inter', sans-serif; letter-spacing: 1px; z-index: 2001;
+    }
+  </style>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+      href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+      href="apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="stripe-band"></div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="imagens/barracalogo.jpg" alt="Barraca Bar"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="ementa.html">Menus</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero" aria-label="Galeria">
+    <div>
+      <h1>Galeria</h1>
+      <p>O nosso espaço, a nossa comida, a nossa alma</p>
+    </div>
+  </section>
+
+  <section class="stripe-roxo" aria-label="Fotografias do Barraca Bar">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow">Em imagens</span>
+        <h2 class="section-title">Um olhar pela Barraca</h2>
+        <div class="divider mx-auto"></div>
+        <p class="section-sub">Clica em qualquer foto para ver em detalhe</p>
+      </div>
+
+      <!--
+      ════════════════════════════════════════════════════
+      PARA ADICIONAR FOTOS:
+        1. Copia o ficheiro para imagens/
+        2. No placeholder pretendido:
+           · Adiciona class "has-photo" ao .gallery-item
+           · Muda data-src="" para data-src="imagens/NOME.jpg"
+           · Substitui <div class="gallery-placeholder">...</div>
+             por <img src="imagens/NOME.jpg" alt="Descrição"/>
+           · Remove <span class="badge-soon">
+
+      CLASSES DE LAYOUT:
+        g-wide → 2 colunas  |  g-tall → 2 linhas
+      ════════════════════════════════════════════════════
+      -->
+
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- ① pallinni — bloco grande: 2 col × 2 linhas -->
+        <div class="gallery-item has-photo g-wide g-tall"
+             data-src="imagens/pallinni.jpg"
+             data-caption="Pizzas Napolitanas com Limoncello Spritz">
+          <img src="imagens/pallinni.jpg" alt="Pizzas Napolitanas com Limoncello Spritz"/>
+          <div class="overlay-label"><span>Pizzas Napolitanas</span></div>
+        </div>
+
+        <!-- ② barraca-hero — normal -->
+        <div class="gallery-item has-photo"
+             data-src="imagens/esplanada.jpg"
+             data-caption="A nossa esplanada">
+          <img src="imagens/esplanada.jpg" alt="esplanada"/>
+          <div class="overlay-label"><span>A Nossa esplanada</span></div>
+        </div>
+
+        <!-- ③ mortadela — normal -->
+        <div class="gallery-item has-photo"
+             data-src="imagens/mortadela.jpg"
+             data-caption="Panuozzo Mortadela e Pistacho">
+          <img src="imagens/mortadela.jpg" alt="Panuozzo Mortadela e Pistacho"/>
+          <div class="overlay-label"><span>Panuozzo Mortadela</span></div>
+        </div>
+
+        <!-- ④ suprema — largo: 2 colunas -->
+        <div class="gallery-item has-photo g-wide"
+             data-src="imagens/suprema.jpg"
+             data-caption="Panuozzo Suprema">
+          <img src="imagens/suprema.jpg" alt="Panuozzo Suprema"/>
+          <div class="overlay-label"><span>Panuozzo Suprema</span></div>
+        </div>
+
+        <!-- ⑤ multiplas — alto: 2 linhas -->
+        <div class="gallery-item has-photo g-tall"
+             data-src="imagens/multiplas.jpg"
+             data-caption="Pizzas da Casa">
+          <img src="imagens/multiplas.jpg" alt="Pizzas da Casa"/>
+          <div class="overlay-label"><span>Pizzas da Casa</span></div>
+        </div>
+
+        <!-- ⑥–⑳ placeholders -->
+        <div class="gallery-item has-photo" 
+             data-src="imagens/bitoque.jpeg" 
+             data-caption="Bitoque da Casa">
+          <img src="imagens/bitoque.jpeg" alt="Bitoque da Casa"/>
+          <div class="overlay-label"><span>O nosso Bitoque</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/barraca-hero.jpg" 
+             data-caption="As nossas barracas">
+          <img src="imagens/barraca-hero.jpg" alt="As nossas barracas"/>
+          <div class="overlay-label"><span>As nossas barracas</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/moscowmule.jpg" 
+             data-caption="Moscow Mule">
+          <img src="imagens/moscowmule.jpg" alt="Moscow Mule"/>
+          <div class="overlay-label"><span>Moscow Mule</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/camaroes.jpeg" 
+             data-caption="Camarões">
+          <img src="imagens/camaroes.jpeg" alt="Camarões"/>
+          <div class="overlay-label"><span>Camarões</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/sangriadacasa.jpg" 
+             data-caption="Sangria da casa">
+          <img src="imagens/sangriadacasa.jpg" alt="Sangria da casa"/>
+          <div class="overlay-label"><span>Um refresco nosso</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/saladafrango.jpeg" 
+             data-caption="Salada Caesar">
+          <img src="imagens/saladafrango.jpeg" alt="Salada Caesar"/>
+          <div class="overlay-label"><span>Salada Caesar</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/ovos.jpg" 
+             data-caption="Ovos Rotos">
+          <img src="imagens/ovos.jpg" alt="Ovos Rotos"/>
+          <div class="overlay-label"><span>Ovos Rotos</span></div>
+        </div>
+      
+        <div class="gallery-item has-photo" 
+             data-src="imagens/dapraia.jpeg" 
+             data-caption="Da Praia">
+          <img src="imagens/dapraia.jpeg" alt="Da Praia"/>
+          <div class="overlay-label"><span>O nosso sumo Da Praia</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/pordosol.jpg" 
+             data-caption="Pôr do sol">
+          <img src="imagens/pordosol.jpg" alt="Vista Bonita"/>
+          <div class="overlay-label"><span>O pôr do sol da nossa praia </span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/pequenoalmoço.jpg" 
+             data-caption="O boost matinal que precisas">
+          <img src="imagens/pequenoalmoço.jpg" alt="Pequeno Almoço"/>
+          <div class="overlay-label"><span>O boost matinal que precisas</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/verao.jpg" 
+             data-caption="Ambiente de verão">
+          <img src="imagens/verao.jpg" alt="Ambiente de verão"/>
+          <div class="overlay-label"><span>Ambiente de verão</span></div>
+        </div>
+
+        <div class="gallery-item has-photo" 
+             data-src="imagens/picapau.jpeg" 
+             data-caption="Pica-pau">
+          <img src="imagens/picapau.jpeg" alt="Pica-pau"/>
+          <div class="overlay-label"><span>Pica-pau</span></div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+    </div>
+  </section>
+
+  <section class="cta-section" aria-label="Instagram">
+    <div class="container">
+      <h2>Quer fazer parte da nossa galeria?</h2>
+      <p>Partilha as tuas fotos connosco no Instagram <strong>@barracafe</strong></p>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-laranja">
+        <i class="fab fa-instagram"></i> Seguir no Instagram
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto em destaque">
+  <span id="lb-counter"></span>
+  <button class="lb-nav" id="lb-prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-nav" id="lb-next" aria-label="Foto seguinte"><i class="fas fa-chevron-right"></i></button>
+  <img id="lightbox-img" src="" alt=""/>
+  <p id="lightbox-caption"></p>
+  <button id="lightbox-close"><i class="fas fa-times me-2"></i>Fechar</button>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-logo"><img src="imagens/barracalogo.jpg" alt="Barraca Bar"/></div>
+        <p class="footer-tagline">Bar · Restaurante · Cocktails<br/>Praia da Areia Branca · desde 2018</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/barraca_bar/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/BarracaCafePab/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Páginas</span>
+        <a href="index.html">Início</a>
+        <a href="ementa.html">Menus</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Contacto</span>
+        <a href="mailto:info@barracabar.pt"><i class="fas fa-envelope me-2"></i>info@barracabar.pt</a>
+        <a href="tel:+351963934133"><i class="fas fa-phone me-2"></i>+351 963 934 133</a>
+        <a href="#"><i class="fas fa-map-marker-alt me-2"></i>Rua Passeio do Mar · Praia da Areia Branca</a>
+        <a href="#"><i class="fas fa-clock me-2"></i>Qua–Dom: 10h–23h</a>
+      </div>
+    </div>
+    <hr class="footer-hr"/>
+    <p class="footer-copy">&copy; 2026 Barraca Bar. Todos os direitos reservados. IVA incluído à taxa legal em vigor.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const grid    = document.getElementById('gallery-grid');
+  const lb      = document.getElementById('lightbox');
+  const lbImg   = document.getElementById('lightbox-img');
+  const lbCap   = document.getElementById('lightbox-caption');
+  const lbCount = document.getElementById('lb-counter');
+  let current   = 0;
+
+  /* Only items with class has-photo */
+  const lbItems = Array.from(grid.querySelectorAll('.gallery-item.has-photo'));
+
+  function abrir(el) {
+    current = lbItems.indexOf(el);
+    lbImg.src           = el.dataset.src;
+    lbImg.alt           = el.dataset.caption;
+    lbCap.textContent   = el.dataset.caption;
+    lbCount.textContent = (current + 1) + ' / ' + lbItems.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fechar() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  function navegar(dir) {
+    current = (current + dir + lbItems.length) % lbItems.length;
+    const el = lbItems[current];
+    lbImg.src           = el.dataset.src;
+    lbImg.alt           = el.dataset.caption;
+    lbCap.textContent   = el.dataset.caption;
+    lbCount.textContent = (current + 1) + ' / ' + lbItems.length;
+  }
+
+  lbItems.forEach(el => {
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('click',   () => abrir(el));
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(el); }
+    });
+  });
+
+  document.getElementById('lightbox-close').addEventListener('click', fechar);
+  document.getElementById('lb-prev').addEventListener('click', () => navegar(-1));
+  document.getElementById('lb-next').addEventListener('click', () => navegar(1));
+  lb.addEventListener('click', e => { if (e.target === lb) fechar(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     fechar();
+    if (e.key === 'ArrowLeft')  navegar(-1);
+    if (e.key === 'ArrowRight') navegar(1);
+  });
+</script>
+</body>
+</html>

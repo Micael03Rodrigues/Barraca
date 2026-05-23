@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contactos | Barraca Bar — Localização e Contacto</title>
+  <meta name="description" content="Entre em contacto com o Barraca Bar em Lisboa. Telefone, email, morada e formulário de contacto. Av. da Praia, 42, Lisboa."/>
+  <meta name="keywords" content="contactos barraca bar, morada restaurante Lisboa praia, telefone barraca bar, formulário contacto"/>
+  <!-- Open Graph -->
+  <meta property="og:type"
+      content="website">
+  <meta property="og:site_name"
+      content="Barraca Bar">
+  <meta property="og:title"
+      content="Barraca Bar | Praia da Areia Branca">
+  <meta property="og:description"
+      content="Pizzas napolitanas, Smash Burgers e cocktails
+               junto à praia. Qua-Dom, 10h-23h.">
+  <meta property="og:image"
+      content="https://barracabar.pt/imagens/pallinni.jpg">
+  <meta property="og:url"
+      content="https://barracabar.pt">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="css/estilos.css" rel="stylesheet"/>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+      href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+      href="apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="stripe-band"></div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="imagens/barracalogo.jpg" alt="Barraca Bar"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="ementa.html">Menus</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero" aria-label="Contactos">
+    <div>
+      <h1>Contactos</h1>
+      <p>Estamos sempre prontos para te receber</p>
+    </div>
+  </section>
+
+  <!-- Info tiles -->
+  <section aria-label="Informações de contacto">
+    <div class="container">
+      <div class="row g-3 mb-5">
+        <div class="col-sm-6 col-lg-3">
+          <div class="info-tile">
+            <div class="ic"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Morada</h3>
+              <p>Rua Passeio do Mar<br/>Praia Areia Branca 2530-240 Lourinhã</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="info-tile">
+            <div class="ic"><i class="fas fa-phone"></i></div>
+            <div>
+              <h3>Telefone</h3>
+              <a href="tel:+351963934133">+351 963 934 133</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="info-tile">
+            <div class="ic"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:info@barracabar.pt">praiabarracabar@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="info-tile">
+            <div class="ic"><i class="fas fa-clock"></i></div>
+            <div>
+              <h3>Horário</h3>
+              <p>Qua–Dom<br/>10:00 — 23:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário + Mapa/Horários -->
+      <div class="row g-5">
+
+        <!-- Formulário de contacto com validação JS -->
+        <div class="col-lg-7">
+          <div class="form-card">
+            <span class="section-eyebrow">Fala connosco</span>
+            <h2 class="section-title mb-1" style="font-size:2rem;">Enviar Mensagem</h2>
+            <div class="divider" style="margin-bottom:1.75rem;"></div>
+
+            <form id="form-contacto" novalidate>
+
+              <div class="mb-form">
+                <label for="nome" class="form-label">
+                  <i class="fas fa-user me-2"></i>Nome Completo *
+                </label>
+                <input type="text" class="form-control" id="nome"
+                       placeholder="O seu nome" aria-required="true"
+                       autocomplete="name"/>
+                <span class="invalid-feedback" id="erro-nome">Por favor insira o seu nome (mínimo 3 caracteres).</span>
+              </div>
+
+              <div class="mb-form">
+                <label for="email" class="form-label">
+                  <i class="fas fa-envelope me-2"></i>Email *
+                </label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="exemplo@email.com" aria-required="true"
+                       autocomplete="email"/>
+                <span class="invalid-feedback" id="erro-email">Por favor insira um email válido.</span>
+              </div>
+
+              <div class="mb-form">
+                <label for="telefone" class="form-label">
+                  <i class="fas fa-phone me-2"></i>Telefone <span style="font-weight:400;text-transform:none;letter-spacing:0;">(opcional)</span>
+                </label>
+                <input type="tel" class="form-control" id="telefone"
+                       placeholder="+351 910 000 000"
+                       autocomplete="tel"/>
+                <span class="invalid-feedback" id="erro-telefone">Se introduzido, deve ter entre 9 e 15 dígitos.</span>
+              </div>
+
+              <div class="mb-form">
+                <label for="assunto" class="form-label">
+                  <i class="fas fa-tag me-2"></i>Assunto *
+                </label>
+                <select class="form-select" id="assunto" aria-required="true">
+                  <option value="">Selecione um assunto</option>
+                  <option value="informacoes">Informações gerais</option>
+                  <option value="grupos">Reserva para grupos (&gt;15 pessoas)</option>
+                  <option value="eventos">Eventos e celebrações</option>
+                  <option value="parceria">Parceria / Colaboração</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="invalid-feedback" id="erro-assunto">Por favor selecione um assunto.</span>
+              </div>
+
+              <div class="mb-form">
+                <label for="mensagem" class="form-label">
+                  <i class="fas fa-comment me-2"></i>Mensagem *
+                </label>
+                <textarea class="form-control" id="mensagem" rows="4"
+                          placeholder="Escreva a sua mensagem..." aria-required="true"></textarea>
+                <span class="invalid-feedback" id="erro-mensagem">A mensagem deve ter pelo menos 10 caracteres.</span>
+              </div>
+
+              <button type="submit" class="btn-barraca w-100" style="font-size:.95rem;padding:.85rem;border-radius:8px;justify-content:center;">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+              </button>
+
+            </form>
+
+            <!-- Sucesso -->
+            <div id="msg-sucesso" role="alert" aria-live="polite">
+              <div style="font-size:3rem;margin-bottom:.6rem;">✅</div>
+              <strong style="font-size:1.1rem;">Mensagem enviada com sucesso!</strong><br/>
+              <span style="font-size:.9rem;font-weight:400;color:#166534;">Responderemos em menos de 24 horas. Obrigado por contactar a Barraca Bar!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info lateral -->
+        <div class="col-lg-5">
+          <span class="section-eyebrow">Onde estamos</span>
+          <h2 class="section-title mb-1" style="font-size:1.9rem;">Localização</h2>
+          <div class="divider" style="margin-bottom:1.25rem;"></div>
+
+          <!-- Mapa placeholder com foto barraca -->
+          <div class="mapa-ph mb-4" role="img" aria-label="Localização do Barraca Bar na marginal de Lisboa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.9455145144434!2d-9.337886423641173!3d39.26680282482271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1f37c53eece9cb%3A0xcfa13758c0b2da64!2sBarraca%20Bar!5e0!3m2!1spt-PT!2spt!4v1779555249412!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <!-- Horários detalhados -->
+          <table class="tabela-hora w-100 mb-4">
+            <thead>
+              <tr><th>Período</th><th>Dias</th><th>Horário</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>☀️ Pequeno-Almoço</td><td>(De Quarta a Domingo)</td><td>10h-12h</td></tr>
+              <tr><td>🍽️ Almoço</td><td>(De Quarta a Domingo)</td><td>12h-15h</td></tr>
+              <tr><td>🌙 Jantar</td><td>(De Quarta a Domingo)</td><td>19h-23h</td></tr>
+              <tr><td>🌙 Jantar</td><td>(De Quarta a Domingo)</td><td>19h-21h</td></tr>
+            </tbody>
+          </table>
+
+          <!-- Como chegar -->
+          <div style="background:var(--azul-pale);border-radius:12px;padding:1.25rem;margin-bottom:1rem;">
+            <h3 style="font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--azul);margin-bottom:.75rem;">
+              <i class="fas fa-directions me-2"></i>Como Chegar
+            </h3>
+            <ul style="padding-left:1.1rem;margin:0;font-size:.85rem;color:var(--texto-muted);">
+              <li><strong>Carro:</strong> A uma pequena viagem de carro da Lourinhã — 5 min</li>
+              <li><strong>Autocarro:</strong> Linha Azul- Rodoviária do Oeste</li>
+              <li><strong>Parque:</strong> Estacionamento gratuito a 1 minuto a pé</li>
+            </ul>
+          </div>
+
+          <!-- Redes -->
+          <div style="background:var(--azul);border-radius:12px;padding:1.25rem;text-align:center;">
+            <p style="color:rgba(255,255,255,.8);font-size:.85rem;margin-bottom:.75rem;">Segue-nos nas redes sociais</p>
+            <div>
+              <a href="https://www.instagram.com/barraca_bar/" aria-label="Instagram" style="color:var(--branco);font-size:1.5rem;margin:0 .6rem;"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/BarracaCafePab/" aria-label="Facebook" style="color:var(--branco);font-size:1.5rem;margin:0 .6rem;"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="TripAdvisor" style="color:var(--branco);font-size:1.5rem;margin:0 .6rem;"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-logo"><img src="imagens/barracalogo.jpg" alt="Barraca Bar"/></div>
+        <p class="footer-tagline">Bar · Restaurante · Cocktails<br/>Praia da Areia Branca · desde 2018</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/barraca_bar/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/BarracaCafePab/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Páginas</span>
+        <a href="index.html">Início</a><a href="ementa.html">Menus</a>
+        <a href="galeria.html">Galeria</a><a href="sobre.html">Sobre</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Contacto</span>
+        <a href="mailto:info@barracabar.pt"><i class="fas fa-envelope me-2"></i>info@barracabar.pt</a>
+        <a href="tel:+351963934133"><i class="fas fa-phone me-2"></i>+351 963 934 133</a>
+        <a href="#"><i class="fas fa-map-marker-alt me-2"></i>Rua Passeio do Mar · Praia da Areia Branca</a>
+        <a href="#"><i class="fas fa-clock me-2"></i>Qua–Dom: 10h–23h</a>
+      </div>
+    </div>
+    <hr class="footer-hr"/>
+    <p class="footer-copy">&copy; 2026 Barraca Bar. Todos os direitos reservados. IVA incluído à taxa legal em vigor.</p>
+  </div>
+</footer>
+
+<!-- EmailJS — must load before validacao.js -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('rCJzSNEIUe0B9apPe');</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/validacao.js"></script>
+</body>
+</html>

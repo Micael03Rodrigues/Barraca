@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Menus | Barraca Bar — Ementa Completa</title>
+  <meta name="description" content="Ementa completa do Barraca Bar: pequeno-almoço, entradas, hambúrguers, panuozzo, pizzas napolitanas, tapas, saladas, sobremesas e bebidas."/>
+  <meta name="keywords" content="ementa barraca bar, pizza napolitana Lisboa, smash burger Lisboa, tapas petiscos, cocktails gin, pequeno almoço praia"/>
+  <!-- Open Graph -->
+  <meta property="og:type"
+      content="website">
+  <meta property="og:site_name"
+      content="Barraca Bar">
+  <meta property="og:title"
+      content="Barraca Bar | Praia da Areia Branca">
+  <meta property="og:description"
+      content="Pizzas napolitanas, Smash Burgers e cocktails
+               junto à praia. Qua–Dom, 10h–23h.">
+  <meta property="og:image"
+      content="https://barracabar.pt/imagens/pallinni.jpg">
+  <meta property="og:url"
+      content="https://barracabar.pt">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="css/estilos.css" rel="stylesheet"/>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+      href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+      href="apple-touch-icon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="stripe-band"></div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="imagens/barracalogo.jpg" alt="Barraca Bar"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ementa.html">Menus</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero" aria-label="Menus">
+    <div>
+      <h1>Os Nossos Menus</h1>
+      <p>Do pequeno-almoço ao jantar — para todos os gostos</p>
+    </div>
+  </section>
+
+  <section aria-label="Ementa completa">
+    <div class="container">
+
+      <!-- Filtros -->
+      <nav class="menu-filter" aria-label="Filtrar por categoria">
+        <button class="ativo" onclick="filtrar('todos',this)">Todos</button>
+        <button onclick="filtrar('pa',this)">☀️ Pequeno-Almoço</button>
+        <button onclick="filtrar('entradas',this)">🥗 Entradas</button>
+        <button onclick="filtrar('burgers',this)">🍔 Hambúrguers</button>
+        <button onclick="filtrar('panuozzo',this)">🥙 Panuozzo</button>
+        <button onclick="filtrar('pizzas',this)">🍕 Pizzas</button>
+        <button onclick="filtrar('tapas',this)">🦐 Tapas</button>
+        <button onclick="filtrar('saladas',this)">🥬 Saladas</button>
+        <button onclick="filtrar('sobremesas',this)">🍫 Sobremesas</button>
+        <button onclick="filtrar('bebidas',this)">🍹 Bebidas</button>
+      </nav>
+
+      <!-- PEQUENO ALMOÇO -->
+      <div class="menu-block" data-s="pa">
+        <h2 class="menu-block-title">Pequeno-Almoço</h2>
+        <p class="menu-block-sub">All Day Breakfast · servido até às 12:00h</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row">
+                <div><div class="prato-nome">Iogurte com Granola Caseira</div><p class="prato-desc">Fruta da época, manteiga de amendoim</p></div>
+                <span class="prato-preco">6 €</span>
+              </div>
+              <div class="prato-row">
+                <div><div class="prato-nome">Açaí Bowl</div><p class="prato-desc">Granola caseira, fruta da época, leite condensado</p></div>
+                <span class="prato-preco">7.8 €</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Tostas</div>
+              <div class="prato-row"><div><div class="prato-nome">Tosta Mista</div><p class="prato-desc">Fiambre e Queijo</p></div><span class="prato-preco">6.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Tosta de Presunto e Queijo da Serra</div><p class="prato-desc">Prosciutto and cheese toast</p></div><span class="prato-preco">7.5 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Croissant</div>
+              <div class="prato-row"><div><div class="prato-nome">Croissant Misto</div><p class="prato-desc">Fiambre e Queijo</p></div><span class="prato-preco">3 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Croissant Doce</div><p class="prato-desc">Nutella</p></div><span class="prato-preco">4 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Croissant Salgado</div><p class="prato-desc">Ovo e Bacon</p></div><span class="prato-preco">6.5 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Panquecas</div>
+              <div class="prato-row"><div><div class="prato-nome">Doces</div><p class="prato-desc">Fruta da época, mel ou chocolate</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Salgadas</div><p class="prato-desc">Bacon, ovos mexidos, mel e manteiga</p></div><span class="prato-preco">9 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Sumos Naturais</div>
+              <div class="prato-row"><div><div class="prato-nome">Da Praia</div><p class="prato-desc">Manga, Abacaxi, Laranja</p></div><span class="prato-preco">4.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Laranja</div></div><span class="prato-preco">4 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Limonadas</div>
+              <div class="prato-row"><div><div class="prato-nome">Morango</div></div><span class="prato-preco">4 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Limão</div></div><span class="prato-preco">4 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Maracujá</div></div><span class="prato-preco">4 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRADAS -->
+      <div class="menu-block" data-s="entradas">
+        <h2 class="menu-block-title">Entradas</h2>
+        <p class="menu-block-sub">Starters</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Sopa do dia</div><p class="prato-desc">Soup of the day</p></div><span class="prato-preco">2.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Couvert</div><p class="prato-desc">Pão, azeitonas, manteiga aromatizada e vinagre balsâmico</p></div><span class="prato-preco">4.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Pão d'alho</div><p class="prato-desc">Alho confitado, azeite, fior di latte</p></div><span class="prato-preco">6 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAMBÚRGUERS -->
+      <div class="menu-block" data-s="burgers">
+        <h2 class="menu-block-title">Hambúrguers</h2>
+        <p class="menu-block-sub">Hamburgers · +2€ batata doce em alternativa</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Double Smash Cheeseburger</div><p class="prato-desc">Dois hambúrgueres de novilho, queijo cheddar, pickles, cebola e batata frita</p></div><span class="prato-preco">10 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Double Smash Bacon Burger</div><p class="prato-desc">Dois hambúrgueres novilho, cheddar, bacon, pickles, cebola, alface, tomate e batata frita</p></div><span class="prato-preco">11.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Chevre Burger</div><p class="prato-desc">Hambúrguer novilho, queijo chevre, cebola frita, rúcula, tomate, molho mostarda e mel, batata frita</p></div><span class="prato-preco">13 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Coração de Abóbora</div><p class="prato-desc">Puré de abóbora, legumes salteados, cogumelos, queijo chevre, pevides. Vegetariano.</p></div><span class="prato-preco">10 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Bitoque de Vaca</div><p class="prato-desc">Batata frita, pickles, ovo estrelado</p></div><span class="prato-preco">12 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Prego com Queijo da Serra</div></div><span class="prato-preco">6.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Menu Kids</div><p class="prato-desc">Hambúrguer no prato com queijo cheddar, arroz e batata frita</p></div><span class="prato-preco">7 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANUOZZO -->
+      <div class="menu-block" data-s="panuozzo">
+        <h2 class="menu-block-title">Panuozzo</h2>
+        <p class="menu-block-sub">Pão napolitano recheado</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Suprema</div><p class="prato-desc">Frango panado, coleslaw, queijo parmesão, maionese de alho</p></div><span class="prato-preco">8 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Mortadela e Pistacho</div><p class="prato-desc">Mortadela, pistacho, stracciatella, rúcula</p></div><span class="prato-preco">8.5 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZAS -->
+      <div class="menu-block" data-s="pizzas">
+        <h2 class="menu-block-title">Pizzas</h2>
+        <p class="menu-block-sub">A Napolitana · massa de alta hidratação, cozida a +400°C</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Margherita</div><p class="prato-desc">Molho tomate, mozzarella fior di latte, manjericão</p></div><span class="prato-preco">9.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Marinara</div><p class="prato-desc">Molho tomate, alho confitado, oregãos</p></div><span class="prato-preco">9 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Signor Pepperonni</div><p class="prato-desc">Molho tomate, fior di latte, pepperoni, flocos de malagueta</p></div><span class="prato-preco">12 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Funghi Selvatici</div><p class="prato-desc">Presunto, fior di latte, gremolata, bechamel de cogumelos, cogumelos marron e shimeji</p></div><span class="prato-preco">13.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Quattro Formaggi Spiciale</div><p class="prato-desc">Fior di latte, gorgonzola, chevre, stracciatella, alecrim</p></div><span class="prato-preco">14 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Al Tonno</div><p class="prato-desc">Molho tomate, fior di latte, atum, cebola roxa, stracciatella, parmesão, manjericão</p></div><span class="prato-preco">12 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Chouriço e Mel Picante</div><p class="prato-desc">Molho tomate, fior di latte, alho confitado, chouriço, mel picante, alecrim</p></div><span class="prato-preco">11 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Verdure Dell'orto</div><p class="prato-desc">Puré abóbora, fior di latte, beringela, curgete, cebola roxa, cogumelos, amêndoa, tomate cherry. Vegetariana.</p></div><span class="prato-preco">13.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Carbonara</div><p class="prato-desc">Molho branco, fior di latte, parmesão, guanciale, pimenta preta, gema de ovo bt</p></div><span class="prato-preco">14 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Pestciatella</div><p class="prato-desc">Pesto, fior di latte, nozes tostadas, stracciatella, guanciale</p></div><span class="prato-preco">15 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Prosciutto &amp; Burrata</div><p class="prato-desc">Molho tomate, fior di latte, presunto, rúcula, burrata, tomate seco</p></div><span class="prato-preco">14 €</span></div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="menu-card" style="background:var(--azul-pale);border-color:var(--azul-pale);">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;"><i class="fas fa-plus-circle me-1"></i> Extras para Pizza</div>
+              <div class="row g-2" style="font-size:.85rem;">
+                <div class="col-6 col-md-4">Mozzarella Fior di Latte <strong style="color:var(--azul);">+3 €</strong></div>
+                <div class="col-6 col-md-4">Burrata <strong style="color:var(--azul);">+4 €</strong></div>
+                <div class="col-6 col-md-4">Pepperoni <strong style="color:var(--azul);">+3 €</strong></div>
+                <div class="col-6 col-md-4">Camarão <strong style="color:var(--azul);">+4 €</strong></div>
+                <div class="col-6 col-md-4">Guanciale / Bacon <strong style="color:var(--azul);">+3 €</strong></div>
+                <div class="col-6 col-md-4">Manjericão <strong style="color:var(--azul);">+0.5 €</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAPAS -->
+      <div class="menu-block" data-s="tapas">
+        <h2 class="menu-block-title">Tapas e Petiscos</h2>
+        <p class="menu-block-sub">Bits and Bites</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Pica-pau</div><p class="prato-desc">Carne salteada, pickles e pão</p></div><span class="prato-preco">10 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Tiras de Pota</div><p class="prato-desc">Fried cuttlefish</p></div><span class="prato-preco">7.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Ovos Rotos</div><p class="prato-desc">Ovo bt, batata frita, presunto, queijo parmesão, salsa</p></div><span class="prato-preco">9 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Camarões "D'aqui"</div><p class="prato-desc">Sauteed Prawns with garlic</p></div><span class="prato-preco">16 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Caracóis</div><p class="prato-desc">1 dose / ½ dose</p></div><span class="prato-preco">10 / 7 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Acompanhamentos Extras</div>
+              <div class="prato-row"><div><div class="prato-nome">Batata frita</div></div><span class="prato-preco">4 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Batata doce</div></div><span class="prato-preco">4.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Coleslaw</div></div><span class="prato-preco">4 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Salada ibérica</div></div><span class="prato-preco">3.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Arroz basmati</div></div><span class="prato-preco">3 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALADAS -->
+      <div class="menu-block" data-s="saladas">
+        <h2 class="menu-block-title">Saladas</h2>
+        <p class="menu-block-sub">Salads</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Caesar de Frango</div><p class="prato-desc">Alface romana, tomate cherry, parmesão, frango, bacon, croutons, molho caesar</p></div><span class="prato-preco">10 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Caesar de Camarão</div><p class="prato-desc">Alface romana, tomate cherry, parmesão, camarão, bacon, croutons, molho caesar</p></div><span class="prato-preco">11 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Chevre</div><p class="prato-desc">Mescla de alfaces, queijo de cabra, fruta da época, amêndoas, mel e flor de sal</p></div><span class="prato-preco">12 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBREMESAS -->
+      <div class="menu-block" data-s="sobremesas">
+        <h2 class="menu-block-title">Sobremesas</h2>
+        <p class="menu-block-sub">Deserts</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div class="prato-row"><div><div class="prato-nome">Mousse Chocolate</div></div><span class="prato-preco">4.5 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Cioccolato di mare</div><p class="prato-desc">Pizza de nutella, caramelo salgado</p></div><span class="prato-preco">6 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEBIDAS -->
+      <div class="menu-block" data-s="bebidas">
+        <h2 class="menu-block-title">Bebidas</h2>
+        <p class="menu-block-sub">Drinks</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Cocktails</div>
+              <div class="prato-row"><div><div class="prato-nome">Cuba Libre</div><p class="prato-desc">Rum, lime, coca-cola</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Caipirinha</div><p class="prato-desc">Cachaça, lime</p></div><span class="prato-preco">6 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Mojito</div><p class="prato-desc">Rum, mint, lime, sparkling water</p></div><span class="prato-preco">8 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Moscow Mule</div><p class="prato-desc">Vodka, lime, ginger beer</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Negroni</div><p class="prato-desc">Gin, Campari, vermouth</p></div><span class="prato-preco">8 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Passion Portuguese</div><p class="prato-desc">Whisky, lime, passion fruit, soda</p></div><span class="prato-preco">8 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Pinacolada</div><p class="prato-desc">Rum, pineapple, coconut</p></div><span class="prato-preco">8 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Aperol Spritz</div><p class="prato-desc">Prosecco, sparkling water</p></div><span class="prato-preco">6 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Limoncello Spritz</div><p class="prato-desc">Prosecco, sparkling water</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Basil Smash</div><p class="prato-desc">Basil, gin, lime juice</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Sangria da Casa</div></div><span class="prato-preco">16 €</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--azul);margin-bottom:.75rem;">Gin</div>
+              <div class="prato-row"><div><div class="prato-nome">Bombay Sapphire</div></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Hendricks</div><p class="prato-desc">Pepino / Cucumber</p></div><span class="prato-preco">9 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Monkey 47</div></div><span class="prato-preco">12 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Beefeater</div><p class="prato-desc">Limão / Lemon</p></div><span class="prato-preco">6 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Beefeater Pink</div><p class="prato-desc">Morango / Strawberry</p></div><span class="prato-preco">7 €</span></div>
+              <div class="prato-row"><div><div class="prato-nome">Nordés</div><p class="prato-desc">Uva e Louro / Grape and Bay Leaf</p></div><span class="prato-preco">9 €</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nota legal -->
+      <div class="menu-card" style="background:var(--cinza-claro);border-color:var(--cinza-borda);text-align:center;padding:1.25rem;">
+        <p style="font-size:.78rem;color:var(--texto-muted);margin:0;">
+          IVA incluído à taxa legal em vigor. Existe livro de reclamações neste estabelecimento.
+          Disponível listagem de alergénios conforme Regulamento (EU) N.º 1169/2011.
+          Nenhum produto pode ser cobrado se não for solicitado pelo cliente.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-logo"><img src="imagens/barracalogo.jpg" alt="Barraca Bar"/></div>
+        <p class="footer-tagline">Bar · Restaurante · Cocktails<br/>Praia da Areia Branca · desde 2018</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/barraca_bar/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/BarracaCafePab/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Páginas</span>
+        <a href="index.html">Início</a><a href="ementa.html">Menus</a>
+        <a href="galeria.html">Galeria</a><a href="sobre.html">Sobre</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div class="col-sm-6 col-lg-4 footer-links">
+        <span class="footer-col-title">Contacto</span>
+        <a href="mailto:info@barracabar.pt"><i class="fas fa-envelope me-2"></i>info@barracabar.pt</a>
+        <a href="tel:+351963934133"><i class="fas fa-phone me-2"></i>+351 963 934 133</a>
+        <a href="#"><i class="fas fa-map-marker-alt me-2"></i>Rua Passeio do Mar . Praia Areia Branca</a>
+        <a href="#"><i class="fas fa-clock me-2"></i>Todos os dias: 10-23h</a>
+      </div>
+    </div>
+    <hr class="footer-hr"/>
+    <p class="footer-copy">&copy; 2026 Barraca Bar. Todos os direitos reservados. IVA incluído à taxa legal em vigor.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function filtrar(cat, btn) {
+    document.querySelectorAll('.menu-filter button').forEach(b => b.classList.remove('ativo'));
+    btn.classList.add('ativo');
+    document.querySelectorAll('[data-s]').forEach(el => {
+      el.style.display = (cat === 'todos' || el.dataset.s === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
